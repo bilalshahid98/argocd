@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: gateway-auth-admin
+spec:
+ selector:
+   matchLabels:
+     run: gateway-auth-admin
+ replicas: 1
+ template:
+   metadata:
+     labels:
+       run: gateway-auth-admin
+   spec:
+     containers:
+     - name: gateway-auth-admin
+       image: us-west1-docker.pkg.dev/nearpeer-394113/dev-microservices-images/nearpeer-gateway-auth-admin-panel:v1
+       ports:
+       - containerPort: 80
+       resources:
+         limits:
+           cpu: 500m
+         requests:
+           cpu: 100m
