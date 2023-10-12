@@ -14,7 +14,7 @@ spec:
    spec:
      containers:
      - name: gateway-auth-admin
-       image: us-west1-docker.pkg.dev/nearpeer-394113/dev-microservices-images/nearpeer-gateway-auth-admin-panel:v1
+       image: us-west1-docker.pkg.dev/nearpeer-394113/dev-microservices-images/argo-demo:55
        ports:
        - containerPort: 80
        resources:
