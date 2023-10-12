@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: gateway-auth-admin
+ name: argo-demo
 spec:
  selector:
    matchLabels:
-     run: gateway-auth-admin
+     run: argo-demo
  replicas: 1
  template:
    metadata:
      labels:
-       run: gateway-auth-admin
+       run: argo-demo
    spec:
      containers:
-     - name: gateway-auth-admin
+     - name: argo-demo
        image: us-west1-docker.pkg.dev/nearpeer-394113/dev-microservices-images/argo-demo:55
        ports:
        - containerPort: 80
